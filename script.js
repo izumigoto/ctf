@@ -2,14 +2,8 @@ const flagInput = document.getElementById('flagInput');
 const submitButton = document.getElementById('submitButton');
 const result = document.getElementById('result');
 
-// Generate a secure random flag (replace with your actual generation logic)
-function generateFlag() {
-  // Implement your secure random flag generation logic here (e.g., using a cryptographically secure random number generator)
-  // For demonstration, use a placeholder:
-  return "YOUR_SECURE_FLAG"; // Replace with your generated flag
-}
 
-const correctFlag = generateFlag();
+const correctFlag = "EaswariCTF;
 
 submitButton.addEventListener('click', () => {
   const userFlag = flagInput.value.trim();
