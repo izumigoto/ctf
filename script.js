@@ -3,7 +3,7 @@ const submitButton = document.getElementById('submitButton');
 const result = document.getElementById('result');
 
 
-const correctFlag = "EaswariCTF;
+const correctFlag = "EaswariCTF";
 
 submitButton.addEventListener('click', () => {
   const userFlag = flagInput.value.trim();
