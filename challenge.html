@@ -3,66 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protected Photo Link</title>
+    <title>Stenography Challenge</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            text-align: center;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
-        .photo-link {
-            font-size: 18px;
-            color: #333;
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        a {
+            font-size: 1.2em;
             text-decoration: none;
-            display: inline-block;
-            margin-bottom: 10px;
+            color: #000;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 0;
+        a:hover {
+            color: #4CAF50;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <p>Don't download the link and stenograph it</p>
-        <a class="photo-link" href="#" id="photo-link">Update Photo</a>
-        <img id="photo" src="placeholder.jpg" alt="Photo">
-    </div>
-
-    <script>
-        // JavaScript to update the photo link
-        const photoLink = document.getElementById('photo-link');
-        const photo = document.getElementById('photo');
-
-        // Replace 'placeholder.jpg' with the URL of your updated photo
-        photoLink.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
-            // Update the photo source
-            photo.src = 'your_updated_photo_url.jpg';
-        });
-    </script>
+    <h1>Don't Download the Link and Stenograph It</h1>
+    <a href="#">Update me with your photo link</a>
 </body>
 </html>
