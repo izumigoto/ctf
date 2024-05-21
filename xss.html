@@ -2,14 +2,24 @@
 <html>
 <head>
 <title>XSS Vulnerable Page</title>
+<script>
+// Function to check if the URL contains the XSS payload
+function checkForXSS() {
+    var userInput = location.hash.substring(1); // Extracting user input from URL hash
+    if (userInput === "<script>alert(0)</script>") {
+        // If the XSS payload is detected, display the flag
+        document.getElementById("flag").innerHTML = "XSS Detected! Flag: FLAG123";
+    } else {
+        // Otherwise, display the user input
+        document.getElementById("userInput").innerHTML = userInput;
+    }
+}
+</script>
 </head>
-<body>
+<body onload="checkForXSS()">
 <h1>XSS Vulnerable Page</h1>
 <p>This page is vulnerable to XSS attacks.</p>
-<script>
-// Intentionally vulnerable code
-var userInput = location.hash.substring(1); // Extracting user input from URL hash
-document.write("<p>" + userInput + "</p>"); // Displaying user input on the page
-</script>
+<div id="userInput"></div>
+<div id="flag"></div>
 </body>
 </html>
